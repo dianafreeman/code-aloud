@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import StateSelect from './state-select';
 
 
 class Head extends Component{

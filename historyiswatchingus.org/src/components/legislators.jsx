@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import Rep from './person.jsx';
-import axios from 'axios';
-import repstyle from '../assets/css/rep-card.css';
 
 
 class Legislators extends React.Component {
@@ -16,7 +14,7 @@ class Legislators extends React.Component {
  
   render(){
 
-  	return <Rep style={{repstyle}} /> 
+  	return <Rep /> 
   }
 
 }
