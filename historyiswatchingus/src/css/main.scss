@@ -1,0 +1,166 @@
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya|Lato');
+$theme-Light: #EBE6E5;
+$theme-LightAccent: #AE8464;
+$theme-lightDisabled: unquote('#70AE8464');
+$theme-Dark: #383E58;
+$theme-DarkAccent: #D72D4E;
+
+
+$brand-primary:              #cf515d !default;
+$brand-info:                 #4a4b74 !default;
+$brand-success:              #7bb34f !default;
+$brand-warning:              #f1831c !default;
+$brand-danger:               #f44336 !default;
+$brand-rose:                 #e58f61 !default;
+$brand-inverse:              #383E58 !default;
+
+
+$brand-primary: #8A8994;
+$brand-info: #2a494d;
+$brand-success: #7bb34f;
+$brand-warning: #f8a317;
+$brand-danger: #f44336; 
+
+
+$heading-font: 'Alegreya', serif;
+$body-font: 'Lato', monospace;
+
+section { width: 100%; }
+
+body {
+  font-family: $body-font;
+  background-color: $theme-Light;
+  h1,
+  h3,
+  h5 {
+      font-weight: 700;
+      color: $theme-Light;
+      font-family: $heading-font;
+  } 
+  h2,
+  h4,
+  h6 {
+      font-weight: 700;
+      color: $theme-LightAccent;
+      font-family: $heading-font;
+  }
+}
+
+
+#masthead {
+  background-color: $theme-Dark;
+  width: 100%;
+  .brand{
+    display: block;
+    width: 100%;
+    padding: 10vh 0vh 10vh 0vh;
+  }
+   .page-header{
+        height: 90vh;
+        overflow: hidden;
+    }
+    h3{
+      width: 100%;
+    }
+    .header-filter{
+    height: inherit;
+    width: inherit;
+	  overflow: hidden;
+    div {
+      z-index: 2;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      margin:unset;
+    }
+    }
+}
+
+ #userForm{
+    width: -webkit-fill-available;
+    padding-bottom: calc(60px + 5vh);
+      p,
+      span,
+      label,
+      a {
+        font-size: 1em;
+        color: white
+      }
+     .form-group {
+      background: $theme-LightAccent;
+      border: 1px solid $theme-Light;
+      border-radius: 1em;
+        label{
+              width: 30%;
+              padding: 1em;
+              margin: unset;
+        }
+      }
+    .stateSelectGroup {
+      background: $theme-LightAccent;
+      border: 1px solid $theme-Light;
+      border-radius: 1em;
+      padding-right: 0.25rem;
+      width: 100%;
+      display: flex;
+
+      select{
+        border-radius: inherit;
+        background: white;
+        height: unset;
+        margin: 0.5em;
+        padding-left: 1em;
+      }
+    }
+    .causesGroup {
+      display: inline-block;
+      .checkBadge {
+        text-align: center;
+        width: 2vw;
+        height: 2vw;
+        min-width: 24px;
+        min-height: 24px;
+        display: inline-block;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-left: 1vw;
+      }
+      .badgebox {
+          opacity: 0;
+      }
+      .badgebox + .checkBadge {
+      /* Move the check mark away when unchecked */
+      text-indent: -999999px;
+      /* Makes the badge's width stay the same checked and unchecked */
+    }
+    .badgebox:focus + .checkBadge {
+    /* Set something to make the badge looks focused */
+    /* Adding a light border */
+    box-shadow: inset 0px 0px .25em;
+    }
+    .badgebox:checked + .checkBadge {
+    /* Move the check mark back when checked */
+    text-indent: 0;
+
+    }
+    .form-check-label{
+      background: $theme-DarkAccent;
+      border-radius: 1em;
+      display: inline-table;
+      margin: 1vw 1vh;
+      span:not(.checkBadge) {
+        width: 80%;
+        float: left;
+      }
+    }
+
+    }
+}
+
+.error{
+  font-weight: bolder !important;
+  z-index: 99999999 !important;
+  color: red !important;
+  font-size: 36px !important;
+}
+
