@@ -1,5 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css?family=Alegreya|Lato');
+@import 'keyframes.scss';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300');
 $theme-Light: #EBE6E5;
 $theme-LightAccent: #AE8464;
 $theme-lightDisabled: unquote('#70AE8464');
@@ -22,15 +23,39 @@ $brand-success: #7bb34f;
 $brand-warning: #f8a317;
 $brand-danger: #f44336; 
 
+$heading-font: 'Open Sans', sans-serif;
+$body-font: 'Open Sans Condensed', sans-serif;
 
-$heading-font: 'Alegreya', serif;
-$body-font: 'Lato', monospace;
+section { 
+  width: 100%; 
+  padding: 1em 0;
+  .card-deck{
+    width:inherit;
+  }
+}
 
-section { width: 100%; }
-
+.card img.rep{
+    border-radius: 100%;
+    width: auto;
+    height: 120px;
+    float: right;
+    margin: 1em;
+}
+#app { 
+  background-color: $theme-Dark;
+  background-image: url('../img/woman-waving-flag.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-blend-mode: overlay;
+}
 body {
   font-family: $body-font;
   background-color: $theme-Light;
+  span,p,a {
+    font-family: $body-font;
+  }
   h1,
   h3,
   h5 {
@@ -48,8 +73,20 @@ body {
 }
 
 
+@keyframes bkgdSwitch {
+    0% { background-image: url('../img/statue-of-liberty.jpg')};
+    25% { background-image: url('../img/woman-waving-flag.jpg')};
+    75%{ background-image: url('../img/statue-of-liberty.jpg')};
+    100% { background-image: url('../img/woman-waving-flag.jpg')};
+}
+
+
+
 #masthead {
-  background-color: $theme-Dark;
+
+/*  animation-name: bkgdSwitch;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;*/
   width: 100%;
   .brand{
     display: block;
@@ -163,4 +200,30 @@ body {
   color: red !important;
   font-size: 36px !important;
 }
+
+/*
+* Mixins
+*/
+
+@include keyframe(fadeout) {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@include keyframe(changecolour) {
+    0% {
+        color: #000;
+    }
+
+    100% {
+        color: #FFF;
+    }
+}
+
+
 
