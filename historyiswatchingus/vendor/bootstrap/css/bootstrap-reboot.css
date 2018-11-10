@@ -1,7 +1,13 @@
 /*!
+<<<<<<< HEAD
  * Bootstrap Reboot v4.0.0-beta.2 (https://getbootstrap.com)
  * Copyright 2011-2017 The Bootstrap Authors
  * Copyright 2011-2017 Twitter, Inc.
+=======
+ * Bootstrap Reboot v4.1.3 (https://getbootstrap.com/)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+>>>>>>> origin
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
@@ -17,20 +23,32 @@ html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
+<<<<<<< HEAD
   -webkit-tap-highlight-color: transparent;
+=======
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+>>>>>>> origin
 }
 
 @-ms-viewport {
   width: device-width;
 }
 
+<<<<<<< HEAD
 article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+=======
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+>>>>>>> origin
   display: block;
 }
 
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+=======
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+>>>>>>> origin
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -40,7 +58,11 @@ body {
 }
 
 [tabindex="-1"]:focus {
+<<<<<<< HEAD
   outline: none !important;
+=======
+  outline: 0 !important;
+>>>>>>> origin
 }
 
 hr {
@@ -63,7 +85,11 @@ abbr[title],
 abbr[data-original-title] {
   text-decoration: underline;
   -webkit-text-decoration: underline dotted;
+<<<<<<< HEAD
           text-decoration: underline dotted;
+=======
+  text-decoration: underline dotted;
+>>>>>>> origin
   cursor: help;
   border-bottom: 0;
 }
@@ -147,7 +173,11 @@ a:not([href]):not([tabindex]) {
   text-decoration: none;
 }
 
+<<<<<<< HEAD
 a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+=======
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+>>>>>>> origin
   color: inherit;
   text-decoration: none;
 }
@@ -160,7 +190,11 @@ pre,
 code,
 kbd,
 samp {
+<<<<<<< HEAD
   font-family: monospace, monospace;
+=======
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+>>>>>>> origin
   font-size: 1em;
 }
 
@@ -180,6 +214,7 @@ img {
   border-style: none;
 }
 
+<<<<<<< HEAD
 svg:not(:root) {
   overflow: hidden;
 }
@@ -195,6 +230,11 @@ summary,
 textarea {
   -ms-touch-action: manipulation;
       touch-action: manipulation;
+=======
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+>>>>>>> origin
 }
 
 table {
@@ -204,7 +244,11 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+<<<<<<< HEAD
   color: #868e96;
+=======
+  color: #6c757d;
+>>>>>>> origin
   text-align: left;
   caption-side: bottom;
 }
@@ -215,7 +259,11 @@ th {
 
 label {
   display: inline-block;
+<<<<<<< HEAD
   margin-bottom: .5rem;
+=======
+  margin-bottom: 0.5rem;
+>>>>>>> origin
 }
 
 button {
@@ -330,6 +378,10 @@ output {
 
 summary {
   display: list-item;
+<<<<<<< HEAD
+=======
+  cursor: pointer;
+>>>>>>> origin
 }
 
 template {

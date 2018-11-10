@@ -5,8 +5,6 @@ Dependencides:
   Global variable for data storage per session
 
 */
-var openSecretsKey = 'd6baa8054d388ade4d57c9e24ef19ced';
-var GoogleKey = "AIzaSyBeJ7EpLw9vtzW1unbbFUkSY6gcsVeHGQs"
 
 
 function getLegislators(StateCode){
