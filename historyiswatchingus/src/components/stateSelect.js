@@ -1,32 +1,26 @@
 import React from 'react';
 import { dispatch } from 'redux';
+import axios from 'axios'; 
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
-import { getRepresentativesFor } from '../js/actions';
-import { SET_LOCATION, GET_REPRESENTATIVES } from '../js/actionTypes';
+import { startLoading, stopLoading, hasError, receiveReps, requestReps, fetchReps } from '../js/actions.js';
+import { SET_LOCATION, REQUEST_REPS, RECEIVE_REPS, IS_LOADING, HAS_ERROR } from '../js/actionTypes';
 import store from '../js/store';
 
-
-const repAction = (reps) => {
-		
-}
 
 class StateSelect extends React.Component {
 	constructor(props){
 		super()
 
 		this.handleStateSelection = (event) => {
-		   	let state_code = event.target.value;
+		   	let StateCode = event.target.value;
 
 			 let setLocation = { 
 				  type: SET_LOCATION, 
-				  payload: state_code
-				  };
+				  payload: StateCode
+				};
 
 			store.dispatch(setLocation);
-			let repsAction = getRepresentativesFor(state_code)
-			console.log(`the rep action is ${repsAction}`)
-			
-			
+			store.dispatch(requestReps(StateCode));
 		}
 	}
 

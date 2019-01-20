@@ -1,5 +1,3 @@
-const fetch = require("node-fetch"); 
-
 export const CauseObject = [
     {
         causeName: 'Heathcare Reform',
@@ -104,7 +102,11 @@ export const CauseObject = [
         ]
     }
 ];
+console.log(CauseObject)
 
+/*
+---- BELOW THIS LINE IS UNUSED --
+*/
 
 const  getIndustrySheet = () => {
 var url = 'https://sheets.googleapis.com/v4/spreadsheets/16MF5dxGiPa92WXLskT1OBK61eTa8CPSWOaEUBFTiZgc/values/crpIndustryCodes?key='+GoogleKey;

@@ -20,9 +20,7 @@ class Header extends React.Component {
 		<div className="brand text-center">
 	            <h1 className="align-middle">{mainDesc}</h1>
 	            <h3 className="align-middle">{subDesc}</h3>
-	      
-	            {this.props.children}
-	    </div>
+	 	    </div>
 	    </header>
 	    </ErrorBoundary>
 	    )

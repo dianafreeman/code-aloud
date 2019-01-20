@@ -19,7 +19,7 @@ class Causes extends React.Component {
 			<FormGroup className="causesGroup">
 	          { Object.keys(CauseObject).map( key => {
 	          	let cause = CauseObject[key];
-	              return <CauseItem key={cause.permalinkName} causeName={cause.causeName} permalinkName={cause.permalinkName}/> 
+	              return <CauseItem cause={cause} key={key}/> 
 
 	          	}) }
 	        </FormGroup>

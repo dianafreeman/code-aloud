@@ -1,6 +1,10 @@
 import React from 'react';
 import { FormGroup, Label, Input, FormText } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { dispatch } from 'redux';
+import store from '../js/store';
+import { setCauses } from '../js/actions';
+
 
 class CauseItem extends React.Component {
 	constructor(props){
@@ -11,17 +15,20 @@ class CauseItem extends React.Component {
 
 
 	this.handleCheckboxChange = (event) => {
-		console.log('selected!')
-		this.setState({'isSelected': true})
-	}
+		store.dispatch(setCauses(this.props.cause));
+		this.props.cause.sectors.map( (sector) => {
+			console.log(sector.code)
+		});
+
 
 	}
+}
 
 
-	render(props){
+	render(){
 		return (
-          <Label check size="md" for={this.props.permalinkName}><span>{this.props.causeName}</span>
-            <Input id={this.props.permalinkName} type="checkbox" className="badgebox" name={this.props.permalinkName} onChange={this.handleCheckboxChange}/>
+          <Label check size="md" for={this.props.cause.permalinkName}><span>{this.props.cause.causeName}</span>
+            <Input id={this.props.cause.permalinkName} type="checkbox" className="badgebox" name={this.props.cause.permalinkName} onChange={this.handleCheckboxChange}/>
             <span className="checkBadge"><FontAwesomeIcon icon="check" /></span>
           </Label>
 		)
